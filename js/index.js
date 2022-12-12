@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded",() =>{
+    firstMovie()
+
+    fetch("http://localhost:3000/films/")
+    .then(response => response.json())
+    .then(menu => {
+        
+        for(item of menu){
+            const ul=document.getElementById('films')
+            const li =document.createElement('li')
+            li.textContent=item.title
+            ul.appendChild(li)
+
+            
+        }
+    })
+
+})
+
+
+
+
+
+firstMovie = function(){
     fetch("http://localhost:3000/films/1")
     .then(response => response.json())
     .then(movie1 => {
@@ -22,4 +45,4 @@ document.addEventListener("DOMContentLoaded",() =>{
    div.appendChild(img)
 
     })
-})
+}
