@@ -3,13 +3,20 @@
 ## Author : Lorraine Kupa
 ****
 ### PROJECT DESCRIPTION
+
 This is an application that allows a user to purchase movie tickets from the theater.
 
 The first movie is displayed on the right while the left contains menu for all the available movies
 
 To purchase a ticket click on the buy ticket button. Tickets can not be bought once the available tickets show sold out.
 
+### View the website
+
+   <a href='https://lorraineken.github.io/WK3-Code-Challenge/'>click here</a>
+
 ## SetUp Instruction
+****
+
 ### Requirements
 * Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
 * JSON server 
@@ -31,7 +38,7 @@ To purchase a ticket click on the buy ticket button. Tickets can not be bought o
     
     cd WK3-Code-Challenge
 
-Open it in ``Visual Studio Code``
+   Open it in ``Visual Studio Code``
 
     code .
 
