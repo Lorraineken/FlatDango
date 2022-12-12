@@ -8,8 +8,12 @@ document.addEventListener("DOMContentLoaded",() =>{
         for(item of menu){
             const ul=document.getElementById('films')
             const li =document.createElement('li')
+            const img=document.createElement('img')
+            img.src=item.poster
+            img.className='h-30 w-25'
             li.textContent=item.title
             ul.appendChild(li)
+            ul.appendChild(img)
 
             
         }
