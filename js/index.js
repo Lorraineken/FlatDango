@@ -43,7 +43,8 @@ movieMenu = function(){
             const li =document.createElement('li')
             const img=document.createElement('img')
             const p=document.createElement('p')
-            p.textContent=`Available tickets: ${item.capacity-item.tickets_sold}`
+            let availableTickets=item.capacity-item.tickets_sold
+            p.textContent=`Available tickets: ${availableTickets}`
             const button=document.createElement('button')
             button.textContent='Buy Ticket'
             img.src=item.poster
@@ -55,8 +56,15 @@ movieMenu = function(){
             ul.appendChild(button)
 
             button.addEventListener('click',()=>{
-                console.log('cool things')
+                if (availableTickets>0){
+                p.textContent=`Available tickets: ${--availableTickets}`
+                }
+                else{
+                    p.textContent='Sold Out'
+                }
             })
+            
+           
 
             
         }
