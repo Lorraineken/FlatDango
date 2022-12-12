@@ -1,24 +1,6 @@
 document.addEventListener("DOMContentLoaded",() =>{
     firstMovie()
-
-    fetch("http://localhost:3000/films/")
-    .then(response => response.json())
-    .then(menu => {
-        
-        for(item of menu){
-            const ul=document.getElementById('films')
-            const li =document.createElement('li')
-            const img=document.createElement('img')
-            img.src=item.poster
-            img.className='h-30 w-25'
-            li.textContent=item.title
-            ul.appendChild(li)
-            ul.appendChild(img)
-
-            
-        }
-    })
-
+    movieMenu()
 })
 
 
@@ -48,5 +30,35 @@ firstMovie = function(){
    div.appendChild(p3)
    div.appendChild(img)
 
+    })
+}
+
+movieMenu = function(){
+    fetch("http://localhost:3000/films/")
+    .then(response => response.json())
+    .then(menu => {
+        
+        for(item of menu){
+            const ul=document.getElementById('films')
+            const li =document.createElement('li')
+            const img=document.createElement('img')
+            const p=document.createElement('p')
+            p.textContent=`Available tickets: ${item.capacity-item.tickets_sold}`
+            const button=document.createElement('button')
+            button.textContent='Buy Ticket'
+            img.src=item.poster
+            img.className='h-30 w-25'
+            li.textContent=item.title
+            ul.appendChild(li) 
+            ul.appendChild(img)
+            ul.appendChild(p)
+            ul.appendChild(button)
+
+            button.addEventListener('click',()=>{
+                console.log('cool things')
+            })
+
+            
+        }
     })
 }
