@@ -48,7 +48,7 @@ movieMenu = function(){
             const button=document.createElement('button')
             button.textContent='Buy Ticket'
             img.src=item.poster
-            img.className='h-30 w-25'
+            img.className='h-25 w-25'
             li.textContent=item.title
             ul.appendChild(li) 
             ul.appendChild(img)
