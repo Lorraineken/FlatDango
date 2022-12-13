@@ -11,7 +11,6 @@ firstMovie = function(){
     fetch("http://localhost:3000/films/1")
     .then(response => response.json())
     .then(movie1 => {
-    console.log(movie1)
 
    const div=document.getElementById('first-movie')
    const h3 = document.createElement('h3')
@@ -57,6 +56,8 @@ movieMenu = function(){
             ul.appendChild(p)
             ul.appendChild(button)
 
+            
+
             button.addEventListener('click',()=>{
                 if (availableTickets>0){
                 p.textContent=`Available tickets: ${--availableTickets}`
@@ -65,10 +66,9 @@ movieMenu = function(){
                     p.textContent='Sold Out'
                 }
             })
-            
-           
 
             
         }
     })
 }
+
