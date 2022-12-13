@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 
 
-
+//function to display the first movie when the page loads
 
 firstMovie = function(){
     fetch("http://localhost:3000/films/1")
@@ -32,6 +32,8 @@ firstMovie = function(){
 
     })
 }
+
+//function to display the menu of movies
 
 movieMenu = function(){
     fetch("http://localhost:3000/films/")
