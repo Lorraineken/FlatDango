@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded",() =>{
 //function to display the first movie when the page loads
 
 firstMovie = function(){
-    fetch("http://localhost:3000/films/1")
+    fetch("https://lorraineken.github.io/server/db.json")
     .then(response => response.json())
-    .then(movie1 => {
+    .then((movie) => {
+        let movie1 = movie.films[0]
 
-   const div=document.getElementById('first-movie')
+   let div=document.getElementById('first-movie')
    const h3 = document.createElement('h3')
    const p1 =document.createElement('p')
    const p2 =document.createElement('p')
@@ -35,11 +36,11 @@ firstMovie = function(){
 //function to display the menu of movies
 
 movieMenu = function(){
-    fetch("http://localhost:3000/films/")
+    fetch("https://lorraineken.github.io/server/db.json")
     .then(response => response.json())
     .then(menu => {
         
-        for(item of menu){
+        for(item of menu.films){
             const ul=document.getElementById('films')
             const li =document.createElement('li')
             const img=document.createElement('img')
