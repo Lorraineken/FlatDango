@@ -10,6 +10,10 @@ The first movie is displayed on the right while the left contains menu for all t
 
 To purchase a ticket click on the buy ticket button. Tickets can not be bought once the available tickets show sold out.
 
+### To view the application 
+
+  [Click here](https://lorraineken.github.io/WK3-Code-Challenge/)
+
 
 ## SetUp Instruction
 ****
